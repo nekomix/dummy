@@ -26,7 +26,7 @@ function create_td_item(content) {
 
 function create_img_item(img_id) {
   tmp_img = "";
-  tmp_img += '<img src="https://i.ytimg.com/vi/' + (img_id) + '/mqdefault.jpg" width= "150cm" />';
+  tmp_img += '<img src="https://i.ytimg.com/vi/' + (img_id) + '/mqdefault.jpg" width= "150cm" loading="lazy" />';
 
   return(tmp_img);
 }
