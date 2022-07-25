@@ -53,6 +53,8 @@ d3.csv(filepath).then(function (data) {
 
     var inputValue = d3.select("#user-input").property("value");
 
+    if (inputValue=="") { return(null);}
+    
     cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - 7);
 
