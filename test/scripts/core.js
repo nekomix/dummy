@@ -36,6 +36,7 @@ function create_img_item(img_id) {
 var parseDate = d3.timeFormat("%Y-%m-%d");
 
 var items = [];
+var filteredItems = [];
 var cutoffDate;
 // --------------------------------------------------------
 
