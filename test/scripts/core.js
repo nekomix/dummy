@@ -78,7 +78,7 @@ d3.csv(filepath).then(function (data) {
     
     // var output = _.sortBy(xxxxxxxxxxxxxx, "avg_vote").reverse()
     var output = filteredItems;
-    for (var i = 0; i < filteredItems.length; i++) {
+    for (var i = 0; i < output.length; i++) {
       d3.select("tbody").insert("tr").html(
         create_td_item( [i+1] ) +
 
