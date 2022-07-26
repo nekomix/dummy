@@ -72,8 +72,8 @@ d3.csv(filepath).then(function (data) {
     
     // filteredItems = filteredItems.filter(items => items["title"].toLowerCase().includes(inputValue.toLowerCase())); 
     filteredItems = filteredItems.filter(
-      items => items["title"].toLowerCase().includes(inputValue.toLowerCase() || 
-        items["author"].toLowerCase().includes(inputValue.toLowerCase())); 
+      items => items["title"].toLowerCase().includes(inputValue.toLowerCase()) || 
+        items["author"].toLowerCase().includes(inputValue.toLowerCase()) ); 
 
     // ---------------------------------------------------------------------------------------------------------------
     
