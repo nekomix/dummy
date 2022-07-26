@@ -73,6 +73,7 @@ d3.csv(filepath).then(function (data) {
       filteredItems = items.filter(items => items["title"].includes(inputValue)); 
     }
 
+    filteredItems = filteredItems.sort((a, b) => new Date(a["publish_date"]) < new Date(b["publish_date"]) ? 1 : -1);
 
     // var output = _.sortBy(xxxxxxxxxxxxxx, "avg_vote").reverse()
     var output = filteredItems;
