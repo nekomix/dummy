@@ -66,7 +66,9 @@ d3.csv(filepath).then(function (data) {
     } else if (window.location.search.substr(1)==="official") {
       filteredItems = items.filter(items => (items["official"]==1));
       
-    } else {}
+    } else {
+      filteredItems = items;
+    }
     
     // ---------------------------------------------------------------------------------------------------------------
     
