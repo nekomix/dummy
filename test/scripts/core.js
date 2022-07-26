@@ -59,18 +59,18 @@ d3.csv(filepath).then(function (data) {
     cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - 7);
 
-    var filteredItems = [];
+    filteredItems = [];
     if (window.location.search.substr(1)==="recent") {
       // items.filter(items => (new Date(items["publish_date"]) > new Date("2022-07-08")));
       // var filteredItems = items.filter(items => (new Date(items["publish_date"]) > cutoffDate));
-      var filteredItems = items.filter(
+      filteredItems = items.filter(
         items => (new Date(items["publish_date"]) > cutoffDate && items["title"].includes(inputValue)));
     } else if (window.location.search.substr(1)==="official") {
-      var filteredItems = items.filter(
+      filteredItems = items.filter(
         items => (items["official"]==1 && items["title"].includes(inputValue)));
       
     } else {
-      var filteredItems = items.filter(items => items["title"].includes(inputValue)); 
+      filteredItems = items.filter(items => items["title"].includes(inputValue)); 
     }
 
 
