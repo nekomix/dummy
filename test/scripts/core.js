@@ -29,7 +29,7 @@ function create_td_item(content) {
 }
 
 function create_td_multi_item(content1, content2) {
-  tmp_td = "<td>" + (content) + (content2) + "</td>";
+  tmp_td = "<td>" + (content1) + (content2) + "</td>";
   return(tmp_td);
 }
 
