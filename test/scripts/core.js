@@ -86,7 +86,7 @@ d3.csv(filepath).then(function (data) {
     var output = filteredItems;
     for (var i = 0; i < output.length; i++) {
       d3.select("tbody").insert("tr").html(
-        create_td_item( [i+1] ) +
+        // create_td_item( [i+1] ) +
 
         // videoId,title,lengthSeconds,channelId,author,keywords,publish_date,official
         create_td_item( create_img_item(output[i]["thumbnail"]) ) +
