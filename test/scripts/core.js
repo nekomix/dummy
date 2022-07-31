@@ -20,7 +20,7 @@ function create_link_item(dtype, key, lbl) {
 
 
 function create_td_item(content) {
-  tmp_td = "<td>" + (content) + "</td>"
+  tmp_td = "<td>" + (content) + "</td>";
   return(tmp_td);
 }
 
@@ -29,6 +29,11 @@ function create_img_item(img_id) {
   tmp_img += '<img class="thumbnail" src="https://i.ytimg.com/vi/' + (img_id) + '/mqdefault.jpg" width= "150cm" loading="lazy" />';
 
   return(tmp_img);
+}
+
+function create_title_item(content) {
+  tmp_td = '<span class="overflow_text">' + content + '</span>';
+  return(tmp_td)
 }
 
 // --------------------------------------------------------
@@ -90,7 +95,7 @@ d3.csv(filepath).then(function (data) {
 
         // videoId,title,lengthSeconds,channelId,author,keywords,publish_date,official
         create_td_item( create_img_item(output[i]["thumbnail"]) ) +
-        create_td_item( output[i]["title"] ) +
+        create_td_item( create_title_item(output[i]["title"]) ) +
         create_td_item( create_link_item("video", output[i]["videoId"], "傳送門") ) +
         create_td_item( output[i]["author"] ) +
         create_td_item( create_link_item("YT", output[i]["channelId"], "頻道") ) +
