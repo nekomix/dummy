@@ -15,7 +15,7 @@ function create_link_item(dtype, key, lbl) {
     //     tmp_a += (key) + '">' + lbl + "</a>";
     
     tmp_a += '<a target="_blank" href="' + "https://youtu.be/" + (key) + '">';
-    tmp_a += '<i class="material-icons">meeting_room</i>'
+    tmp_a += '<i class="material-icons">meeting_room</i>';
     tmp_a += "</a>";
   }
 
@@ -108,7 +108,7 @@ d3.csv(filepath).then(function (data) {
         //         create_td_item( create_link_item("video", output[i]["videoId"], "傳送門") ) +
 
         create_td_multi_item( 
-          create_link_item("video", output[i]["videoId"], "傳送門") +
+          create_link_item("video", output[i]["videoId"], "傳送門"),
           create_title_item(output[i]["title"]) ) +
 
         create_td_item( output[i]["author"] ) +
