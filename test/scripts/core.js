@@ -10,9 +10,13 @@ function create_link_item(dtype, key, lbl) {
     tmp_a += (key) + '">' + lbl + "</a>";
 
   } else if (dtype=="video") {
-    tmp_a += '<a target="_blank" href="' + "https://youtu.be/";
-    //     tmp_a += '<a target="_blank" href="' + "";
-    tmp_a += (key) + '">' + lbl + "</a>";
+    //     tmp_a += '<a target="_blank" href="' + "https://youtu.be/";
+    //     //     tmp_a += '<a target="_blank" href="' + "";
+    //     tmp_a += (key) + '">' + lbl + "</a>";
+    
+    tmp_a += '<a target="_blank" href="' + "https://youtu.be/" + (key) + '">';
+    tmp_a += '<i class="material-icons">meeting_room</i>'
+    tmp_a += "</a>";
   }
 
   return(tmp_a);
