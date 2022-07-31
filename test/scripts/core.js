@@ -111,8 +111,9 @@ d3.csv(filepath).then(function (data) {
           create_link_item("video", output[i]["videoId"], "傳送門"),
           create_title_item(output[i]["title"]) ) +
 
-        create_td_item( output[i]["author"] ) +
-        create_td_item( create_link_item("YT", output[i]["channelId"], "頻道") ) +
+        create_td_item( create_link_item("YT", output[i]["channelId"], output[i]["author"]) ) +
+        //         create_td_item( create_link_item("YT", output[i]["channelId"], "頻道") ) +
+
         create_td_item( output[i]["publish_date"] )
         // create_td_item( output[i]["official"] )
       )
