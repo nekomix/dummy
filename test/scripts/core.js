@@ -32,7 +32,7 @@ function create_img_item(img_id) {
 }
 
 function create_title_item(content) {
-  tmp_td = '<span class="overflow_text">' + content + '</span>';
+  tmp_td = '<div class="overflow_text">' + content + '</div>';
   return(tmp_td)
 }
 
